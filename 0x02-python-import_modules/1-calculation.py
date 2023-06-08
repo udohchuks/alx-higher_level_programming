@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+import calculator_1
+
+if __name__ == "__main__":
+    a = 10
+    b = 5
+    print("{} + {} = {}".format(a, b, calculator_1.add(10, 5)))
+
+    print("{} - {} = {}".format(a, b, calculator_1.sub(10, 5)))
+
+    print("{} * {} = {}".format(a, b, calculator_1.mul(10, 5)))
+
+    print("{} / {} = {}".format(a, b, calculator_1.div(10, 5)))
+
