@@ -1,16 +1,17 @@
-import dis
+#!/usr/bin/python3
+import importlib.util
 
 if __name__ == "__main__":
-    with open("hidden_4.pyc", "rb") as file:
-        code = file.read()
-        # Disassemble the bytecode
-        instructions = dis.get_instructions(code)
+    if __name__ == "__main__":
+        spec = importlib.util.spec_from_file_location("hidden_4", "hidden_4.pyc")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
         # Extract the names that do not start with "__"
         names = sorted(
-                instruction.argval
-                for instruction in instructions
-                if instruction.opname == "LOAD_CONST" and not instruction.argval.startswith("__")
+                name
+                for name in dir(module)
+                if not name.startswith("__")
                 )
-        # Print the names
+        # Print the name
         for name in names:
             print(name)
