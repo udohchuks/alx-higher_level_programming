@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 import sys
 if __name__ == "__main__":
-    arguments = sys.argv
-    size = len(arguments) - 1
+    arguments = sys.argv[1:]
+    size = len(arguments)
     result = 0
-    if arguments and size != 0:
-        for i, arg in enumerate(arguments):
-            if i == 0:
-                continue
-            result += int(arguments[i])
-        print(result)
+    if size != 0:
+        for arg in arguments:
+            result += int(arg)
+    print("{:d}".format(result))
