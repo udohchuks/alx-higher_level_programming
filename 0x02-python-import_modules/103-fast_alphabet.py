@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-import string
-print(*string.ascii_uppercase, sep='')
+import builtins
+builtins.print(*map(chr, range(65, 91)), sep='', end='\n')
+
