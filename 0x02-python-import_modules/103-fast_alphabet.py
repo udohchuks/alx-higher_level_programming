@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-import builtins
-builtins.print(*map(chr, range(65, 91)), sep='', end='\n')
+import string
+print(''.join(map(chr, range(ord('A'), ord('Z')+1))))
+
