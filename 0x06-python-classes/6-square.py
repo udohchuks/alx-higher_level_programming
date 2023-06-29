@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""
+Square class
+methods
+size
+print
+position
+"""
+
 class Square:
     """
     This class represents a square.
