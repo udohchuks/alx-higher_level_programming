@@ -1,0 +1,34 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>> matrix = "sting"
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/samuel/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 21, in matrix_divided
+    raise TypeError("matrix must be a matrix (list of lists) of integers/float")
+TypeError: matrix must be a matrix (list of lists) of integers/float
+>>> matrix = [[2,3 ,3], [4,5]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/samuel/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 24, in matrix_divided
+    raise TypeError("Each row of the matrix must have the same size")
+TypeError: Each row of the matrix must have the same size
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/samuel/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 24, in matrix_divided
+    raise TypeError("Each row of the matrix must have the same size")
+TypeError: Each row of the matrix must have the same size
+>>> matrix = [[2,3 ,3], [4,5, 6]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/samuel/alx-higher_level_programming/0x07-python-test_driven_development/2-matrix_divided.py", line 28, in matrix_divided
+    raise ZeroDivisionError("division by zero")
+ZeroDivisionError: division by zero
