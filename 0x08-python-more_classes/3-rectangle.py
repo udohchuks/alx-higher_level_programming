@@ -42,3 +42,18 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def area(self):
+        """Area"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Perimeter"""
+        return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """str"""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        else:
+            return "\n".join(["#" * self.__width] * self.__height)
