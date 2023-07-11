@@ -14,5 +14,4 @@ class MyList(list):
         """
         Sorted List
         """
-
         print(sorted(self))
