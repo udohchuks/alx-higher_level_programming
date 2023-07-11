@@ -10,8 +10,6 @@ class MyList(list):
     """
     MyList
     """
-    pass
-
     def print_sorted(self):
         """
         Sorted List
