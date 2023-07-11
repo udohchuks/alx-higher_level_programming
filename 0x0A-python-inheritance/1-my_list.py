@@ -17,4 +17,4 @@ class MyList(list):
         Sorted List
         """
 
-        print(sorted(list(self)))
+        print(sorted(self))
