@@ -2,8 +2,8 @@
 """
 Test for Rectangle class
 """
-import sys
-sys.path.append("../models")
+
+from models.base import Base
 import unittest
 from models.rectangle import Rectangle
 

@@ -5,8 +5,6 @@ Unit test cases for the Base class.
 """
 import unittest
 from models.base import Base
-import sys
-sys.path.append("../models")
 
 
 class TestBase(unittest.TestCase):
