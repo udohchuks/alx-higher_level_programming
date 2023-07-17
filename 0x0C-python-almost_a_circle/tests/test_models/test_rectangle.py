@@ -74,6 +74,23 @@ class TestRectangle(unittest.TestCase):
         actual_area = rect.area()
         self.assertEqual(expected_area, actual_area)
 
+    def test_update_with_args(self):
+        """update"""
+        r = Rectangle(10, 20, 1, 2, 42)
+        r.update(1, 30, 40, 3, 4)
+        self.assertEqual(str(r), "[Rectangle] (1) 3/4 - 30/40")
+
+    def test_update_with_kwargs(self):
+        """update"""
+        r = Rectangle(10, 20, 1, 2, 42)
+        r.update(width=30, height=40, x=3, y=4)
+        self.assertEqual(str(r), "[Rectangle] (42) 3/4 - 30/40")
+
+    def test_update_no_args_or_kwargs(self):
+        r = Rectangle(10, 20, 1, 2, 42)
+        r.update()
+        self.assertEqual(str(r), "[Rectangle] (42) 1/2 - 10/20")
+
+
 if __name__ == "__main__":
     unittest.main()
-
