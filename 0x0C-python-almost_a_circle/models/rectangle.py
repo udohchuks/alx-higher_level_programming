@@ -68,6 +68,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, y):
+        """setter for y"""
         if not isinstance(y, int):
             raise TypeError("y must be an integer")
         if y < 0:
@@ -75,4 +76,5 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
+        """Area function"""
         return self.width * self.height
