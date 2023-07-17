@@ -67,6 +67,12 @@ class TestRectangle(unittest.TestCase):
             Rectangle(10, 20, 1, "invalid")
         self.assertEqual(str(cm.exception), "y must be an integer")
 
+    def test_area(self):
+        """"Test area"""
+        rect = Rectangle(5, 5)
+        expected_area = 5 * 5
+        actual_area = rect.area()
+        self.assertEqual(expected_area, actual_area)
 
 if __name__ == "__main__":
     unittest.main()
