@@ -57,3 +57,7 @@ class Rectangle:
             return ""
         else:
             return "\n".join(["#" * self.__width] * self.__height)
+
+    def __repr__(self):
+        """Returns a string repr of rect"""
+        return f'Rectangle({self.width}, {self.height})'
