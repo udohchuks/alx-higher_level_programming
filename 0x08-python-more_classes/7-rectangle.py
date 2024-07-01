@@ -60,7 +60,8 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            symbol = str(getattr(self, 'print_symbol', self.__class__.print_symbol))
+            symbol = str(getattr(
+                self, 'print_symbol', self.__class__.print_symbol))
             return "\n".join([symbol * self.width] * self.height)
 
     def __repr__(self):
