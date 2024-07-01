@@ -56,7 +56,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            return "\n".join(["#" * self.__width] * self.__height)
+            return "\n".join(["#" * self.width] * self.height)
 
     def __repr__(self):
         """Returns a string repr of rect"""
