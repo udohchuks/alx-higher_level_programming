@@ -13,4 +13,4 @@ if __name__ == "__main__":
         user_data = response.json()
         print(user_data.get('id'))
     else:
-        print(f"Error code: {response.status_code}")
+        print("None")
